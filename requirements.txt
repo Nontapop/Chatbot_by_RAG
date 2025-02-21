@@ -9,3 +9,4 @@ accelerate
 gradio
 flask
 flask-cors
+gunicorn
