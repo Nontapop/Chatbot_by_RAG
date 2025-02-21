@@ -1,0 +1,23 @@
+# Ignore Virtual Environment
+venv/
+
+# Ignore Python cache files
+__pycache__/
+*.pyc
+*.pyo
+
+# Ignore logs and temporary files
+*.log
+*.tmp
+
+# Ignore data files (เช่น ไฟล์ที่ใหญ่เกินไป)
+*.bin
+*.csv
+
+# Ignore environment variables and sensitive files
+.env
+config.json
+
+# Ignore IDE specific files
+.vscode/
+.idea/

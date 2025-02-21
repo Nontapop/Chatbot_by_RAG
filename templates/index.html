@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="UTF-8">
+    <title>RAG Chatbot</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <h1>RAG Chatbot</h1>
+    <input type="text" id="userInput" placeholder="พิมพ์คำถาม...">
+    <button onclick="sendMessage()">ส่งคำถาม</button>
+
+    <div id="responseContainer"></div>
+
+    <script>
+        async function sendMessage() {
+            const userInput = document.getElementById('userInput').value;
+            const responseContainer = document.getElementById('responseContainer');
+
+            if (!userInput) {
+                alert('กรุณาพิมพ์คำถาม!');
+                return;
+            }
+
+            const response = await fetch('/ask', {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify({ query: userInput })
+            });
+
+            const data = await response.json();
+            responseContainer.innerHTML = `<p>Bot: ${data.response}</p>`;
+        }
+    </script>
+</body>
+</html>

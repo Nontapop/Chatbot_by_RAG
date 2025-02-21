@@ -1,0 +1,78 @@
+/* ตั้งค่าพื้นฐาน */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    background-color: #ffffff;
+    color: #333;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    padding: 20px;
+}
+
+/* หัวข้อหลัก */
+h1 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+    color: #4CAF50;
+}
+
+/* กล่องรับข้อความ */
+input[type="text"] {
+    width: 300px;
+    padding: 10px;
+    font-size: 1rem;
+    border: 2px solid #ddd;
+    border-radius: 8px;
+    outline: none;
+    margin-right: 10px;
+    transition: border-color 0.3s;
+}
+
+input[type="text"]:focus {
+    border-color: #4CAF50;
+}
+
+/* ปุ่มส่งคำถาม */
+button {
+    padding: 10px 20px;
+    font-size: 1rem;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.1s;
+}
+
+button:hover {
+    background-color: #45a049;
+}
+
+button:active {
+    transform: scale(0.98);
+}
+
+/* พื้นที่แสดงผลลัพธ์ */
+#responseContainer {
+    margin-top: 20px;
+    width: 80%;
+    max-width: 500px;
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+p {
+    margin: 10px 0;
+    font-size: 1rem;
+    line-height: 1.5;
+}
