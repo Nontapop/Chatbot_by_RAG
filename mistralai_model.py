@@ -1,7 +1,7 @@
 from huggingface_hub import InferenceClient
 
 # ใช้ Access Token ของคุณ
-API_TOKEN = ""  # 🔹 เปลี่ยนเป็น Token ของคุณ
+API_TOKEN = "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"  # 🔹 เปลี่ยนเป็น Token ของคุณ
 MODEL_NAME = "mistralai/Mistral-7B-Instruct-v0.2"
 
 # สร้าง Client

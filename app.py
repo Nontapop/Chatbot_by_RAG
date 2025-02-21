@@ -3,7 +3,7 @@ from retriever import retrieve_documents
 from huggingface_hub import InferenceClient
 
 # 🔹 ใช้ Access Token และโมเดลจาก Hugging Face
-API_TOKEN = ""  # 🔸 ใช้ Token ของคุณ
+API_TOKEN = "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"  # 🔸 ใช้ Token ของคุณ
 MODEL_NAME = "mistralai/Mistral-7B-Instruct-v0.2"
 
 client = InferenceClient(model=MODEL_NAME, token=API_TOKEN)
