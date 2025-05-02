@@ -1,19 +1,33 @@
-# Ignore Virtual Environment
-venv/
-
-# Ignore Python cache files
+# Python
 __pycache__/
-*.pyc
-*.pyo
+*.py[cod]
+*.egg
+*.egg-info/
+dist/
+build/
 
-# Ignore logs and temporary files
-*.log
-*.tmp
+# Virtual environments
+venv/
+env/
+.venv/
 
-# Ignore environment variables and sensitive files
-.env
-config.json
-
-# Ignore IDE specific files
+# IDEs
 .vscode/
 .idea/
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Static files (หากมีอัปโหลด)
+static/uploads/
+media/
+
+# Environment/config files
+.env
+*.env
+config.json
+
+# Logs
+*.log
+

@@ -1,8 +1,10 @@
 from huggingface_hub import InferenceClient
+import os
+
 
 # ใช้ Access Token ของคุณ
-API_TOKEN = "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"  # 🔹 เปลี่ยนเป็น Token ของคุณ
-MODEL_NAME = "mistralai/Mistral-7B-Instruct-v0.2"
+API_TOKEN = os.getenv("HF_TOKEN")  # 🔹 เปลี่ยนเป็น Token ของคุณ
+MODEL_NAME = "mistralai/Mistral-7B-Instruct-v0.3"
 
 # สร้าง Client
 client = InferenceClient(model=MODEL_NAME, token=API_TOKEN)

@@ -1,10 +1,11 @@
 from flask import Flask, request, jsonify, render_template
 from retriever import retrieve_documents
 from huggingface_hub import InferenceClient
+import os
 
 # 🔹 ใช้ Access Token และโมเดลจาก Hugging Face
-API_TOKEN = "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"  # 🔸 ใช้ Token ของคุณ
-MODEL_NAME = "mistralai/Mistral-7B-Instruct-v0.2"
+API_TOKEN = os.getenv("HF_TOKEN")  # 🔸 ใช้ Token ของคุณ
+MODEL_NAME = "mistralai/Mistral-7B-Instruct-v0.3"
 
 client = InferenceClient(model=MODEL_NAME, token=API_TOKEN)
 
